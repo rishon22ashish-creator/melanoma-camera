@@ -4,7 +4,9 @@
 
 ### How to run it on your own machine
 
-1. Download streamlit_app.py, requirements.txt, and the 'models' folder
+1. Download streamlit_app.py, requirements.txt, 
+
+2. Download the .keras file from 'models' and place it in a 'models' folder
 
 1. Install the requirements
 
