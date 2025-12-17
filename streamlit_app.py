@@ -108,11 +108,10 @@ if image is not None:
 					probs = preds[0]
 					class_idx = int(np.argmax(probs))
 					confidence = float(probs[class_idx])
-					if class_idx == 1:
+					if preds >= 0.5:
 							st.write("The model predicts a high likelihood of malignant melanoma. Please consult a medical professional for an accurate diagnosis.")
 					else:
 							st.write("The model predicts a low likelihood of malignant melanoma. However, this does not rule out the possibility of skin cancer. Always consult a medical professional for an accurate diagnosis.")
-					st.markdown(f"**Prediction:** Class {class_idx}")
 					st.markdown(f"**Confidence:** {confidence * 100:.1f}%")
 					with st.expander("Raw probabilities"):
 						st.write(probs.tolist())
